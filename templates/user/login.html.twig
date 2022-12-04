@@ -15,7 +15,9 @@
             <label for="username">Email</label>
             <input type="email" id="username" name="_username" value="{{ lastUsername }}">
 
-            <label for="password">Email</label>
+            <input type="hidden" name="_target_path" value="{{ path('tasks') }}">
+
+            <label for="password">Password</label>
             <input type="password" id="password" name="_password">
 
             <input type="submit" value="Enter">
