@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 use App\form\RegisterType;
 use App\Entity\User;
 
-
 class UserController extends AbstractController
 {
     public function register(Request $req, UserPasswordEncoderInterface $encoder): Response
@@ -44,6 +43,7 @@ class UserController extends AbstractController
     {
         $error = $authUtils->getLastAuthenticationError();
         $lastUsername = $authUtils->getLastUsername();
+
 
         return $this->render('user/login.html.twig', [
             'error' => $error,
