@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %}Symfony tasks - User login{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h2>Login</h2>
+
+        {% if error %}
+            <div class="alert alert-error">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <form action="{{ path('login') }}" method="POST">
+            <label for="username">Email</label>
+            <input type="email" id="username" name="_username" value="{{ lastUsername }}">
+
+            <label for="password">Email</label>
+            <input type="password" id="password" name="_password">
+
+            <input type="submit" value="Enter">
+        </form>
+    </div>
+{% endblock %}

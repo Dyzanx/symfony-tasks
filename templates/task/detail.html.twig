@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}Symfony tasks - Task details{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h2>{{ 'Task: ' ~ task.title }}</h2>
+
+        <div class="task">
+            <h3>User info</h3>
+            <p class="user-data-task">{{ task.user.name ~ '   ' ~ task.user.surname ~ ' - ' ~ task.user.email}}</p>
+
+            <h3>Task info</h3>
+            <p>{{ task.content }}</p>
+            <p>Presupuested hours: {{ task.hours }}h</p>
+            <p>PRIORITY: {{ task.priority }}</p>
+            <p>Task published: {{ task.createdAt|date('d/m/Y h:i') }}</p>
+        </div>
+    </div<
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if edit is defined %}
+        Symfony tasks - Edit task
+    {% else %}
+        Symfony tasks - Create task
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+        <div class="example-wrapper">
+            {% if edit is defined %}
+                <h2>Edit '{{ task.title }}' task</h2>
+            {% else %}
+                <h2>Add new entry to task list</h2>
+            {% endif %}
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div<
+    {% endblock %}

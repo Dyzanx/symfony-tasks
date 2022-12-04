@@ -1,0 +1,37 @@
+# *TASKS ROUTES
+tasks:
+  path: /tasks
+  controller: App\Controller\TaskController::index
+
+task:
+  path: /task/detail/{id}
+  controller: App\Controller\TaskController::detail
+
+task_create:
+  path: /task/create
+  controller: App\Controller\TaskController::creation
+
+my_tasks:
+  path: /my-tasks
+  controller: App\Controller\TaskController::myTasks
+
+task_edit:
+  path: /task/edit/{id}
+  controller: App\Controller\TaskController::edit
+
+task_delete:
+  path: /task/delete/{id}
+  controller: App\Controller\TaskController::delete
+
+# * USER ROUTES
+register:
+  path: /register
+  controller: App\Controller\UserController::register
+
+login:
+  path: /
+  controller: App\Controller\UserController::login
+
+logout:
+  path: /user/logout
+  controller: App\Controller\UserController::class

@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}Symfony tasks - My tasks{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h2>My tasks list</h2>
+
+        {{ include('includes/tasks-table.html.twig') }}
+{% endblock %}
